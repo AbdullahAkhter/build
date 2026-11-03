@@ -1,19 +1,17 @@
 name: Build Angular
 on: 
  push:
-  branches: [main]
+    branches: [main]
 jobs:
-  demo:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v7.1.0
-      - name: setup Node js
-        uses: actions/setup-node@v7.1.0
-        with:
-          node-version:22
-      - name: install dependencies
-        run: npm install
-      - name: Build
-        run: npm run buold
-      
-  
+    demo:
+     runs-on: ubuntu-latest
+     steps:
+         - uses: actions/checkout@v7.1.0
+         - name: setup Node environment
+           uses: actions/setup-node@v7.1.0
+         - name: install dependencies
+           run: npm install
+         - name: Build
+           run: npm run build
+           
+    
