@@ -1,0 +1,17 @@
+name: build angular build
+on: 
+ push: 
+  branches: [main]
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      -  uses: actions/checkout@v7.0.1
+      -  name: setup node.js
+         uses: actions/setup-node@v7.1.0
+      -  name: install dependencies
+         run: npm install
+      -  name: build
+         run: npm run build
+           
+  
